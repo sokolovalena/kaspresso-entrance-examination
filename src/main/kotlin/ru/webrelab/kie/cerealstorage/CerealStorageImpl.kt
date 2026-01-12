@@ -56,6 +56,7 @@ class CerealStorageImpl(
             storage[cereal] = 0f
             return current
         } else {
+            storage[cereal] = current - amount
             return amount
         }
     }

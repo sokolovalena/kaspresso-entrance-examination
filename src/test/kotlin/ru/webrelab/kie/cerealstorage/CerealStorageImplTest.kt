@@ -108,4 +108,10 @@ class CerealStorageImplTest {
         assertTrue(storage.toString().contains("BUCKWHEAT"))
     }
 
+    @Test
+    fun `should return some units after add and take`() {
+        storage.addCereal(Cereal.BUCKWHEAT, 5f)
+        storage.getCereal(Cereal.BUCKWHEAT, 2f)
+        assertEquals(3f, storage.getAmount(Cereal.BUCKWHEAT), 0.01f)
+    }
 }
